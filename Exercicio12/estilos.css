@@ -22,7 +22,7 @@ p {
 }
 
 header {
-    position: fixed;
+    /* position: fixed; */
     z-index: 1000;
     align-items: center;
     margin-top: 30px;
