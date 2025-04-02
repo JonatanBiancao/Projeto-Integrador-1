@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Universe - Formulário de Contato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-graduation-cap"></i> Car Universe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="form.html">Contato</a></li>
+                <li><a href="technologies.html">Tecnologias</a></li>
+                <li><a href="concepts.html">Conceitos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="form-container">
+            <h2>Formulário de Contato</h2>
+            <p>Preencha o formulário abaixo para entrar em contato conosco:</p>
+            
+            <form id="contactForm" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefone (DDD + número):</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" placeholder="DDD + número">
+                </div>
+                
+                <div class="form-group">
+                    <label for="carModel">Modelo de Interesse:</label>
+                    <select id="carModel" name="carModel">
+                        <option value="">Selecione um modelo</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="hatch">Hatchback</option>
+                        <option value="sport">Esportivo</option>
+                        <option value="electric">Elétrico</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Método de Contato Preferido:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="contactEmail" name="contactMethod" value="email">
+                        <label for="contactEmail">E-mail</label>
+                        
+                        <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                        <label for="contactPhone">Telefone</label>
+                        
+                        <input type="radio" id="contactWhatsapp" name="contactMethod" value="whatsapp">
+                        <label for="contactWhatsapp">WhatsApp</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Interesses:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="interest1" name="interests" value="test-drive">
+                        <label for="interest1">Test Drive</label>
+                        
+                        <input type="checkbox" id="interest2" name="interests" value="financing">
+                        <label for="interest2">Financiamento</label>
+                        
+                        <input type="checkbox" id="interest3" name="interests" value="catalog">
+                        <label for="interest3">Receber Catálogo</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="reset" class="btn">Limpar</button>
+                </div>
+            </form>
+            
+            <div id="formResult" style="display: none;"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Car Universe. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="scripts/script.js"></script>
+</body>
+</html>
